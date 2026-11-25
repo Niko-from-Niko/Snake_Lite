@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка - Современная версия</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="title">🐍 ЗМЕЙКА</h1>
+            <div class="score-container">
+                <div class="score-item">
+                    <span class="score-label">Счёт:</span>
+                    <span id="score" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Рекорд:</span>
+                    <span id="highScore" class="score-value">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <div class="game-over-content">
+                    <h2>Игра окончена!</h2>
+                    <p class="final-score">Ваш счёт: <span id="finalScore">0</span></p>
+                    <button id="restartBtn" class="restart-btn">🔄 Играть снова</button>
+                </div>
+            </div>
+            <div id="startScreen" class="start-screen">
+                <div class="start-content">
+                    <h2>🐍 ЗМЕЙКА</h2>
+                    <p class="instructions">Используйте стрелки или WASD для управления</p>
+                    <button id="startBtn" class="start-btn">▶ Начать игру</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls-info">
+            <div class="control-hint">
+                <span class="key">↑</span>
+                <span class="key">←</span>
+                <span class="key">↓</span>
+                <span class="key">→</span>
+                <span class="text">или WASD</span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="particles"></div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
